@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="tr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tablo Oluşturmak - Markdown Elkitabı</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Markdown, her türlü düzenlemeye olanak veren basit bir işaretleme dilidir.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+		<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+		
+        
+    	
+		</head>
+	<body>
+
+	<!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="İçindekiler">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+			                <ol class="chapter"><li class="expanded affix "><a href="../index.html">Giriş</a></li><li class="expanded "><a href="../yazar-hakkinda.html"><strong aria-hidden="true">1.</strong> Yazar Hakkında</a></li><li class="spacer"></li><li class="expanded "><a href="../1/index.html"><strong aria-hidden="true">2.</strong> Başlarken</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="../1/markdown-nedir.html"><strong aria-hidden="true">2.1.</strong> Markdown Nedir</a></li><li class="expanded "><a href="../1/kurulacak-yazilimlar.html"><strong aria-hidden="true">2.2.</strong> Markdown İçin Kurulacak Yazılımlar</a></li></ol></li><li class="expanded "><a href="../2/index.html"><strong aria-hidden="true">3.</strong> Markdown İle Neler Yapabiliriz?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="../2/web-sitesi.html"><strong aria-hidden="true">3.1.</strong> Web Sitesi</a></li><li class="expanded "><a href="../2/dokuman.html"><strong aria-hidden="true">3.2.</strong> Doküman</a></li><li class="expanded "><a href="../2/not.html"><strong aria-hidden="true">3.3.</strong> Not</a></li><li class="expanded "><a href="../2/kitap.html"><strong aria-hidden="true">3.4.</strong> Kitap</a></li><li class="expanded "><a href="../2/slayt.html"><strong aria-hidden="true">3.5.</strong> Slayt</a></li><li class="expanded "><a href="../2/eposta.html"><strong aria-hidden="true">3.6.</strong> E-posta</a></li><li class="expanded "><a href="../2/dokumantasyon.html"><strong aria-hidden="true">3.7.</strong> Dokümantasyon</a></li></ol></li><li class="expanded "><a href="../3/index.html"><strong aria-hidden="true">4.</strong> Temel Sözdizimi</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="../3/baslamadan-once.html"><strong aria-hidden="true">4.1.</strong> Başlamadan Önce</a></li><li class="expanded "><a href="../3/basliklar.html"><strong aria-hidden="true">4.2.</strong> Başlıklar</a></li><li class="expanded "><a href="../3/paragraflar.html"><strong aria-hidden="true">4.3.</strong> Paragraflar</a></li><li class="expanded "><a href="../3/vurgulamalar.html"><strong aria-hidden="true">4.4.</strong> Vurgulamalar</a></li><li class="expanded "><a href="../3/alinti-bloklari.html"><strong aria-hidden="true">4.5.</strong> Alıntı Blokları</a></li><li class="expanded "><a href="../3/listeler.html"><strong aria-hidden="true">4.6.</strong> Listeler</a></li><li class="expanded "><a href="../3/kod-tanimlama.html"><strong aria-hidden="true">4.7.</strong> Kod Tanımlama</a></li><li class="expanded "><a href="../3/yatay-cizgi.html"><strong aria-hidden="true">4.8.</strong> Yatay Çizgi</a></li><li class="expanded "><a href="../3/link-olusturmak.html"><strong aria-hidden="true">4.9.</strong> Link Oluşturmak</a></li></ol></li><li class="expanded "><a href="../4/index.html"><strong aria-hidden="true">5.</strong> Gelişmiş Sözdizimi</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="expanded "><a href="../4/giris.html"><strong aria-hidden="true">5.1.</strong> Giriş</a></li><li class="expanded "><a href="../4/tablo-olusturmak.html" class="active"><strong aria-hidden="true">5.2.</strong> Tablo Oluşturmak</a></li><li class="expanded "><a href="../4/cevrili-kod-bloglari.html"><strong aria-hidden="true">5.3.</strong> Çevrili Kod Blogları</a></li><li class="expanded "><a href="../4/dipnotlar.html"><strong aria-hidden="true">5.4.</strong> Dipnotlar</a></li><li class="expanded "><a href="../4/tanim-listeleri.html"><strong aria-hidden="true">5.5.</strong> Tanım Listeleri</a></li><li class="expanded "><a href="../4/tikli-listeler.html"><strong aria-hidden="true">5.6.</strong> Tikli Listeler</a></li><li class="spacer"></li></ol></li><li class="expanded "><a href="../son-Sozler.html"><strong aria-hidden="true">6.</strong> Son Sözler</a></li><li class="expanded "><a href="../iletisim-bilgileri.html"><strong aria-hidden="true">7.</strong> İletişim Bilgileri</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="İçindekiler'i göster/gizle" aria-label="İçindekiler'i göster/gizle" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Temayı Değiştir" aria-label="Temayı Değiştir" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Ara.(Kısayol: s)" aria-label="Arama Çubuğu'nu göster/gizle" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h2 class="menu-title">Markdown Elkitabı - Bora FIRLANGEÇ<br /><a href="../markdown-elkitabi.epub">Kitabı EPUB formatında indirebilirsiniz!</a></h2>
+
+                        <div class="right-buttons">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Bu Kitapta Ara..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#tablo-oluşturmak" id="tablo-oluşturmak">Tablo Oluşturmak</a></h1>
+<p>Dokümanlarımızda verilerimizi düzenli bir biçimde paylaşmanın en kolay yolu onları bir tablo üzerinde göstermektir. Tabloların sütun ve satırlardan oluştuğunu bildiğinizi varsayarsak, ki bilmemeniz mümkün değil, bunun ne kadar doğru olduğu konusunda bana katılmalısınız.</p>
+<p><strong>Markdown</strong> ile tablo oluşturabilmek ilk başta biraz karmaşıkmış gibi gözükebilir fakat sizlere bu konuyu öyle basit bir şekilde göstereceğim ki, oluşturmanın ne kadar kolay olduğuna kendiniz bile inanamayacaksınız.</p>
+<p>Bana bilgisayarlarımızda kullandığımız öyle bir işaret söyleyin ki, iki kelime arasında set oluşturabiliyor olsun. Cevabınızın <code>|</code> olduğunu duydum, bravo size. Dikey çubuk, çubuk, dik çizgi gibi isimlerle bildiğiniz bu işaret, bizim tablolarımızda önemli roller üstleniyor, sütunlarımızı oluşturuyor.</p>
+<p>Markdown’da, tablolarımızın ilk satırı her zaman başlık satırıdır. Bir alt satırda ise sütunlarımızın yerleşiminin nasıl olacağını işaretleriz. Ardından gelecek tüm satırlarda verilerimiz bulunur.</p>
+<p>Dilerseniz adım adım gidelim. Önce tablomuzu oluşturalım, ardından tablomuzu şekillendirmeyi görelim.</p>
+<h2><a class="header" href="#basit-tablo-oluşturmak" id="basit-tablo-oluşturmak">Basit Tablo Oluşturmak</a></h2>
+<p>Yukarıda ilk satırın her zaman başlık satırı olduğunu, ardından gelen satırın da biçimlendirme satırı olduğunu söylemiştim. Ayrıca sütunlarımızı bölecek işaretin de <code>|</code> olduğunu eklemiştim.</p>
+<p>Şimdi bu iki bilgiyi birleştirelim. İlk sütunda <strong>ad</strong>, <strong>soyad</strong> ve <strong>pozüsyon</strong> bilgilerini aralarına <strong>dik çizgi</strong> koyarak ayıralım. Ardından alt satıra geçelim ve aynı işi orada da yapalım. Tek bir fark var ki, ikinci satırda <strong>ad</strong>, <strong>soyad</strong> gibi kelimelerin yerine en az üç tane  <code>-</code> koyalım. Bunun ileride ne olduğunu anlatacağım, acele etmeyin.</p>
+<p>En sonunda da üçüncü satırdan itibaren verileri girelim.</p>
+<p>Haydi bunu bir örnekle akılda kalıcı hâle getirelim:</p>
+<h5><a class="header" href="#markdown" id="markdown">Markdown</a></h5>
+<pre><code class="language-markdown">Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:
+
+|Ad|Soyad|Pozüsyon|
+|---|---|---|
+|Leyla|karabacak|Yönetici Asistanı|
+|Mahmut|Erdemli|Genel Koordinatör|
+|Yusuf|Sanıkgil|Muhasebe Müdür Yardımcısı|
+
+Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.
+</code></pre>
+<h5><a class="header" href="#html" id="html">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th&gt;Ad&lt;/th&gt;
+&lt;th&gt;Soyad&lt;/th&gt;
+&lt;th&gt;Pozüsyon&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;Leyla&lt;/td&gt;
+&lt;td&gt;karabacak&lt;/td&gt;
+&lt;td&gt;Yönetici Asistanı&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;Mahmut&lt;/td&gt;
+&lt;td&gt;Erdemli&lt;/td&gt;
+&lt;td&gt;Genel Koordinatör&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;Yusuf&lt;/td&gt;
+&lt;td&gt;Sanıkgil&lt;/td&gt;
+&lt;td&gt;Muhasebe Müdür Yardımcısı&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı" id="Çıktı">Çıktı</a></h5>
+<hr />
+<p>Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Ad</th>
+<th>Soyad</th>
+<th>Pozüsyon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Leyla</td>
+<td>karabacak</td>
+<td>Yönetici Asistanı</td>
+</tr>
+<tr class="even">
+<td>Mahmut</td>
+<td>Erdemli</td>
+<td>Genel Koordinatör</td>
+</tr>
+<tr class="odd">
+<td>Yusuf</td>
+<td>Sanıkgil</td>
+<td>Muhasebe Müdür Yardımcısı</td>
+</tr>
+</tbody>
+</table>
+<p>Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.</p>
+<hr />
+<blockquote>
+<h6><a class="header" href="#not" id="not">Not</a></h6>
+<p>Her satırın başında ve sonunda <code>|</code> işaretinin olması gerektiğini aklınızdan çıkarmayın. Çoğu Markdown işlemcisi bunu zorunlu kılmasa da siz, elinizi alıştırmaya bakın.</p>
+</blockquote>
+<h2><a class="header" href="#tablo-hizalamak" id="tablo-hizalamak">Tablo Hizalamak</a></h2>
+<p>İkinci satırdaki <code>---</code> işaretlerinin ne olduğunu sonra söyleyeceğim demiştim. O sonra artık şimdi.</p>
+<p>Eğer her bir sütun için sadece <code>---</code> kullanırsanız herhangi bir biçimlendirme olmadan basit bir tablo oluşturmuş olursunuz. Eğer o üç tirenin sadece başına iki nokta üst üste <code>:</code> koyarsanız sola, sonuna <code>:</code> koyarsanız sağa, her iki tarafına da <code>:</code> koyarsanız ortalı bir sütun elde etmiş olursunuz.</p>
+<p>Tamam! Yukarıdaki örneğin aynısını <strong>ad</strong> sütununu sola, <strong>soyad</strong> sütununu ortaya ve <strong>pozüsyon</strong> sütununu da sağa yaslı olacak şekilde yeniden yazalım:</p>
+<h5><a class="header" href="#markdown-1" id="markdown-1">Markdown</a></h5>
+<pre><code class="language-markdown">Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:
+
+|Ad|Soyad|Pozüsyon|
+|:---|:---:|---:|
+|Leyla|karabacak|Yönetici Asistanı|
+|Mahmut|Erdemli|Genel Koordinatör|
+|Yusuf|Sanıkgil|Muhasebe Müdür Yardımcısı|
+
+Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.
+</code></pre>
+<h5><a class="header" href="#html-1" id="html-1">HTML</a></h5>
+<pre><code class="language-html">&lt;p&gt;Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Ad&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;Soyad&lt;/th&gt;
+&lt;th style=&quot;text-align: right;&quot;&gt;Pozüsyon&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Leyla&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;karabacak&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot;&gt;Yönetici Asistanı&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Mahmut&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;Erdemli&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot;&gt;Genel Koordinatör&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Yusuf&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;Sanıkgil&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot;&gt;Muhasebe Müdür Yardımcısı&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.&lt;/p&gt;
+</code></pre>
+<h5><a class="header" href="#Çıktı-1" id="Çıktı-1">Çıktı</a></h5>
+<hr />
+<p>Aşağıdaki tabloda bilgileri bulunan kişiler yarınki toplantıya davetlidir:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ad</th>
+<th style="text-align: center;">Soyad</th>
+<th style="text-align: right;">Pozüsyon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Leyla</td>
+<td style="text-align: center;">karabacak</td>
+<td style="text-align: right;">Yönetici Asistanı</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mahmut</td>
+<td style="text-align: center;">Erdemli</td>
+<td style="text-align: right;">Genel Koordinatör</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Yusuf</td>
+<td style="text-align: center;">Sanıkgil</td>
+<td style="text-align: right;">Muhasebe Müdür Yardımcısı</td>
+</tr>
+</tbody>
+</table>
+<p>Bu kişilerin en geç üç saat içinde toplantı katılım durumlarını bildirmeleri gerekmektedir.</p>
+<hr />
+<p>Gördüğünüz gibi özellikle <strong>HTML</strong> kodlarında <strong>Left</strong>, <strong>Center</strong> ve <strong>Right</strong> gibi kelimeler var. Bu, istediğimizi başardığımız anlamına geliyor.</p>
+<blockquote>
+<h6><a class="header" href="#not-1" id="not-1">Not</a></h6>
+<p>Tablo ücrelerinin içinde link oluşturmak, altını çizmek gibi işlemleri gerçekleştirebilirsiniz fakat kod bloğu gibi birden çok satır içeren biçimlendirmeler uygulayamazsınız. Bu durumda listeler, kod blokları gibi biçimlendirmeler tablolarda kullanılamıyorken satır için kod bloğu eklemek başarılı bir şekilde kullanılabilir.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Sayfa Gezinme">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../4/giris.html" class="mobile-nav-chapters previous" title="Önceki Konu" aria-label="Önceki Konu">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../4/cevrili-kod-bloglari.html" class="mobile-nav-chapters next" title="Sonraki Konu" aria-label="Sonraki Konu">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Sayfa gezinme">
+                
+                    <a href="../4/giris.html" class="nav-chapters previous" title="Önceki Konu" aria-label="Önceki Konu">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../4/cevrili-kod-bloglari.html" class="nav-chapters next" title="Sonraki Konu" aria-label="Sonraki Konu">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+      	  		  				  				  </body>
+</html>
